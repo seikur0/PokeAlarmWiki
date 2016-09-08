@@ -61,21 +61,25 @@ Below is how a basic Telegram alarm configuration would appear in `alarms.json`.
 In addition to the required parameters, several `alarm.json` optional parameters are available to personalize your notifications.  Below is an example of these optional parameters and how they are incorporated into a functional alarm layout.
 
 
-These optional parameters, `startup_message`, and `startup_list`, are entered at the same level as `"type":"telegram"`.
+Parameters at the alarm level will be the default to alert-level parameters.
 
 | Parameters         | Description                                                | Default                      |
 |:-------------------|:-----------------------------------------------------------|:-----------------------------|
+| `location`         | Sends minimap after main message.                                        | `True`            |
+| `disable_map_notification`	| Disables map notifications.  Set to `False` if you are experiencing notification issues on Android                | `True`                       |
+| `venue`	| Sends location in main message.              | `False`                       |
 | `startup_message`  | Confirmation post when PokeAlarm initialized               | `True`                       |
 | `startup_list`     | First post will list all alarmed pokemon enabled in `alarms.json`    | `True`            |
-| `location`         | Minimap in alerts.                                         | `True`            |
 
-These optional parameters below are applicable to the `pokemon`, `pokestop`, and `gym` sections of the JSON file.
+These optional parameters below are applicable to the `pokemon`, `pokestop`, and `gym` sections of the JSON file. These parameters overide the alarm-level settings for this alert.
 
 | Parameters | Description                                      | Default													|
 | -----------|:-------------------------------------------------|:----------------------------------------------------------|
 | `title`    | Header text for the message						| `A wild <pkmn> has appeared!`								|
 | `body`     | Additional text to be added to the message		| `"<gmaps> \n Available until <24h_time> (<time_left>)."`	| 
-| `location` | Minimap in alerts. Overrides channel level setting.						| `True`													| 
+| `location`         | Sends minimap after main message.                                        | `True`            |
+| `disable_map_notification`	| Disables map notifications.  Set to `False` if you are experiencing notification issues on Android                | `True`                       |
+| `venue`	| Sends location in main message.              | `False`                       | 
 
 ### Example: Alarm Configuration Using Optional Parameters
 Below is how an advanced alarm configuration would appear in `alarms.json`. Note that this is **not** the entire `alarms.json`, but only the section pertaining to the alarm portion of the JSON file.
