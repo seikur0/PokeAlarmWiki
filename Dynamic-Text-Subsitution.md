@@ -59,19 +59,22 @@ For what fields (title, message, etc) you have the option to change, please see 
 
 NoteThere are **two** `pokemon` keys in `alarms.json`.  The follow text substitutions below pertain to the `pokemon` field in the `alarms:{}` section.
 
-| Text           | Description                            |
-|:-------------- |:---------------------------------------|
-| `<id>`         | ID of the alerted pokemon              |
-| `<pkmn>`       | Name of the alerted pokemon            |
-| `<lat>`        | Latitude of the pokemon                |
-| `<lng>`        | Longitude of the pokemon               |
-| `<gmaps>`      | Gmaps link to a pin of the pokemon     |
-| `<dist>`       | *Distance from set location in meters  |
-| `<time_left>`  | Time remaining for the pokemon         |
-| `<12h_time>`   | Dissapear time in 12hour format        |
-| `<24h_time>`   | Dissapear time in 24hour format        |
-| `<dir>`        | Cardinal direction from set location   |
+| Text            | Description                            |
+|:----------------|:---------------------------------------|
+| `<id>`          | ID of the alerted pokemon              |
+| `<pkmn>`        | Name of the alerted pokemon            |
+| `<lat>`         | Latitude of the pokemon                |
+| `<lng>`         | Longitude of the pokemon               |
+| `<gmaps>`       | Gmaps link to a pin of the pokemon     |
+| `<dist>`        | *Distance from set location in meters  |
+| `<time_left>`   | Time remaining for the pokemon         |
+| `<12h_time>`    | Dissapear time in 12hour format        |
+| `<24h_time>`    | Dissapear time in 24hour format        |
+| `<dir>`         | Cardinal direction from set location   |
+| `<respawn_text>`| **Respawn Message                      |
 *If no location has been set, dist will always return 0 (meters or yards)
+
+**For map tools supporting this feature, this will show messages for spawned pokemon, that'll be back after a hidden phase. I.e. for pokemon from a 2x15 point it'll show '15m later back for 15m.', when scanned during the first 15 minutes.
 
 ## Pokestop Text
 A list of text substitutions for the `pokestop` field in the alarm section are below:
